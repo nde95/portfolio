@@ -4,10 +4,8 @@ import { Helmet } from "react-helmet";
 import { faMailBulk } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-	faTwitter,
 	faGithub,
-	faStackOverflow,
-	faInstagram,
+	faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 
 import Logo from "../components/common/logo";
@@ -100,7 +98,7 @@ const Homepage = () => {
 								</div>
 							</div>
 
-							<div className="homepage-first-area-right-side">
+							{/* <div className="homepage-first-area-right-side">
 								<div className="homepage-image-container">
 									<div className="homepage-image-wrapper">
 										<img
@@ -110,20 +108,10 @@ const Homepage = () => {
 										/>
 									</div>
 								</div>
-							</div>
+							</div> */}
 						</div>
 
 						<div className="homepage-socials">
-							<a
-								href={INFO.socials.twitter}
-								target="_blank"
-								rel="noreferrer"
-							>
-								<FontAwesomeIcon
-									icon={faTwitter}
-									className="homepage-social-icon"
-								/>
-							</a>
 							<a
 								href={INFO.socials.github}
 								target="_blank"
@@ -135,22 +123,12 @@ const Homepage = () => {
 								/>
 							</a>
 							<a
-								href={INFO.socials.stackoverflow}
+								href={INFO.socials.linkedin}
 								target="_blank"
 								rel="noreferrer"
 							>
 								<FontAwesomeIcon
-									icon={faStackOverflow}
-									className="homepage-social-icon"
-								/>
-							</a>
-							<a
-								href={INFO.socials.instagram}
-								target="_blank"
-								rel="noreferrer"
-							>
-								<FontAwesomeIcon
-									icon={faInstagram}
+									icon={faLinkedin}
 									className="homepage-social-icon"
 								/>
 							</a>
@@ -170,28 +148,11 @@ const Homepage = () => {
 							<AllProjects />
 						</div>
 
-						<div className="homepage-after-title">
-							<div className="homepage-articles">
-								{myArticles.map((article, index) => (
-									<div
-										className="homepage-article"
-										key={(index + 1).toString()}
-									>
-										<Article
-											key={(index + 1).toString()}
-											date={article().date}
-											title={article().title}
-											description={article().description}
-											link={"/article/" + (index + 1)}
-										/>
-									</div>
-								))}
-							</div>
-
+						{/* <div className="homepage-after-title">
 							<div className="homepage-works">
 								<Works />
 							</div>
-						</div>
+						</div> */}
 
 						<div className="page-footer">
 							<Footer />
